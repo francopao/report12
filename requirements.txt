@@ -6,3 +6,4 @@ plotly
 fredapi
 fear-and-greed
 matplotlib
+openpyxl
