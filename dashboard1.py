@@ -120,7 +120,7 @@ def graficar_fred(datos, titulo, series, zoom=False):
 
 # --------------------------------------
 # STREAMLIT UI
-# --------------------------------------
+# -------------------------------------
 
 st.set_page_config(layout="wide")
 st.image("https://media.licdn.com/dms/image/v2/C4E0BAQHGRK4sbvBk8w/company-logo_200_200/company-logo_200_200/0/1664209061611/decision_capital_eirl_logo?e=2147483647&v=beta&t=dS9RqOZoCN82k_Jqg6JF9Fm7MAQlNUSfIrEuQdLg_qQ", 
@@ -171,7 +171,7 @@ with tab1:
 
         st.subheader("Exportar datos")
         output = io.BytesIO()
-        with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        with pd.ExcelWriter(output, engine='openpyxl') as writer:
             df.to_excel(writer, index=False, sheet_name='Yield Curve')
             if "Spread 10Y - 2Y" in df.columns:
                 df[['Date', 'Spread 10Y - 2Y']].to_excel(writer, index=False, sheet_name='Spread')
