@@ -50,7 +50,7 @@ def obtener_datos_tesoro(periodos):
 # --------------------------------------
     
 def obtener_datos_fred():
-    codigos = {
+    codigo = {
         # Labor Market
         "Total Nonfarm Payrolls": "PAYEMS",
         "Unemployment Rate": "UNRATE",
